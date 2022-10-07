@@ -2,6 +2,7 @@
 
 @prefix cdmc-core: <https://spec.edmcouncil.org/cdmc/ontology/Core/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,7 +11,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Core>
 	a owl:Ontology ;
-	<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
+	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports <http://purl.org/dc/elements/1.1/> ;
 	owl:versionInfo "Created with TopBraid Composer" ;
@@ -168,7 +169,7 @@ cdmc-core:PeriodOfTime
 	rdfs:comment "An interval of time that is named or defined by its start and end dates." ;
 	dc:source <http://purl.org/dc/terms/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
-	rdfs:seeAlso <http://purl.org/dc/terms/PeriodOfTime> ;
+	rdfs:seeAlso dct:PeriodOfTime ;
 	.
 
 cdmc-core:Resource
@@ -263,7 +264,7 @@ cdmc-core:coversPeriodOfTime
 	rdfs:domain cdmc-core:Resource ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-core:PeriodOfTime ;
-	rdfs:seeAlso <http://purl.org/dc/terms/temporal> ;
+	rdfs:seeAlso dct:temporal ;
 	.
 
 cdmc-core:describes

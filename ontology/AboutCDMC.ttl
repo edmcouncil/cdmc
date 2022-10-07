@@ -10,6 +10,7 @@
 
 @prefix AboutCDMC: <https://spec.edmcouncil.org/cdmc/ontology/AboutCDMC#> .
 @prefix cdmc-cv: <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

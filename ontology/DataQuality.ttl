@@ -5,6 +5,7 @@
 @prefix cdmc-cv: <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies/> .
 @prefix cdmc-dq: <https://spec.edmcouncil.org/cdmc/ontology/DataQuality/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -13,7 +14,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/DataQuality>
 	a owl:Ontology ;
-	<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
+	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports
 		<https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ,
