@@ -13,6 +13,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Policy>
 	a owl:Ontology ;
+	<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	owl:imports
 		<https://spec.edmcouncil.org/cdmc/ontology/Control> ,
 		<https://spec.edmcouncil.org/cdmc/ontology/Core> ,
