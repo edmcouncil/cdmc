@@ -1,0 +1,264 @@
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Core
+
+@prefix cdmc-core: <https://spec.edmcouncil.org/cdmc/ontology/Core/> .
+@prefix cdmc-lin: <https://spec.edmcouncil.org/cdmc/ontology/Lineage/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/cdmc/ontology/Lineage>
+	a owl:Ontology ;
+	owl:imports <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
+	owl:versionInfo "Created with TopBraid Composer" ;
+	.
+
+cdmc-lin:Activity
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Activity" ;
+	rdfs:comment "Something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#Activity> ;
+	.
+
+cdmc-lin:Derivation
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Derivation" ;
+	rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the creation of a new entity as a copy of a pre-existing entity." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#Derivation> ;
+	.
+
+cdmc-lin:Entity
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Entity" ;
+	rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#Entity> ;
+	owl:equivalentClass _:blank3 ;
+	.
+
+cdmc-lin:LineageRecord
+	a owl:Class ;
+	rdfs:subClassOf
+		owl:Thing ,
+		_:blank4
+		;
+	rdfs:label "Lineage Record" ;
+	rdfs:comment "Information about the movement and transformation of data from a point of origin to its final destination." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	.
+
+cdmc-lin:LineageReport
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Lineage Report" ;
+	rdfs:comment "A report that provides information about a number of movements and transformations of data from a point of origin to its final destination." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	.
+
+cdmc-lin:Revision
+	a owl:Class ;
+	rdfs:subClassOf cdmc-lin:Derivation ;
+	rdfs:label "Revision" ;
+	rdfs:comment "A revision is a derivation for which the resulting entity is a revised version of some original." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#Revision> ;
+	.
+
+cdmc-lin:derivedFromEntity
+	a owl:ObjectProperty ;
+	rdfs:label "derived from entity" ;
+	rdfs:comment "References an entity which influenced this Derivation." ;
+	dc:source
+		"CDMC" ,
+		"prov:"
+		;
+	rdfs:domain cdmc-lin:Derivation ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Entity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#entity> ;
+	.
+
+cdmc-lin:hadActivity
+	a owl:ObjectProperty ;
+	rdfs:label "had activity" ;
+	rdfs:comment "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Derivation ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Activity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#hadActivity> ;
+	.
+
+cdmc-lin:hadDuration
+	a owl:ObjectProperty ;
+	rdfs:label "had duration" ;
+	rdfs:comment "The duration of an Activity." ;
+	dc:source "CDMC" ;
+	rdfs:domain cdmc-lin:Activity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:PeriodOfTime ;
+	.
+
+cdmc-lin:hasCreator
+	a owl:ObjectProperty ;
+	rdfs:label "has creator" ;
+	rdfs:comment "An agent responsible for making the entity." ;
+	dc:source
+		"CDMC" ,
+		<http://purl.org/dc/terms/>
+		;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:Agent ;
+	rdfs:seeAlso <http://purl.org/dc/terms/creator> ;
+	.
+
+cdmc-lin:hasPublisher
+	a owl:ObjectProperty ;
+	rdfs:label "has publisher" ;
+	rdfs:comment "An agent responsible for making the Entity available." ;
+	dc:source
+		"CDMC" ,
+		<http://purl.org/dc/terms/>
+		;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:Agent ;
+	rdfs:seeAlso <http://purl.org/dc/terms/publisher> ;
+	.
+
+cdmc-lin:hasQualifiedDerivation
+	a owl:ObjectProperty ;
+	rdfs:label "has qualified derivation" ;
+	rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Derivation ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#qualifiedDerivation> ;
+	.
+
+cdmc-lin:isRevisionOf
+	a owl:ObjectProperty ;
+	rdfs:label "is revision of" ;
+	rdfs:comment "A revision is a derivation for which the resulting entity is a revised version of some original." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Entity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasRevisionOf> ;
+	.
+
+cdmc-lin:isSpecializationOf
+	a owl:ObjectProperty ;
+	rdfs:label "is specialization of" ;
+	rdfs:comment "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Entity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#specializationOf> ;
+	.
+
+cdmc-lin:recordedBy
+	a owl:ObjectProperty ;
+	rdfs:label "recorded by" ;
+	rdfs:domain cdmc-lin:LineageRecord ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:Agent ;
+	.
+
+cdmc-lin:records
+	a owl:ObjectProperty ;
+	rdfs:label "records" ;
+	rdfs:domain cdmc-lin:LineageRecord ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Derivation ;
+	.
+
+cdmc-lin:wasAssociatedWith
+	a owl:ObjectProperty ;
+	rdfs:label "was associated with" ;
+	rdfs:comment "An assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Activity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:Agent ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasAssociatedWith> ;
+	.
+
+cdmc-lin:wasAttributedTo
+	a owl:ObjectProperty ;
+	rdfs:label "was attributed to" ;
+	rdfs:comment "Attribution is the ascribing of an entity to an agent." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-core:Agent ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasAttributedTo> ;
+	.
+
+cdmc-lin:wasDerivedFrom
+	a owl:ObjectProperty ;
+	rdfs:label "was derived from" ;
+	rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Entity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+	.
+
+cdmc-lin:wasGeneratedBy
+	a owl:ObjectProperty ;
+	rdfs:label "was generated by" ;
+	rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Entity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Activity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasGeneratedBy> ;
+	.
+
+cdmc-lin:wasInformedBy
+	a owl:ObjectProperty ;
+	rdfs:label "was informed by" ;
+	rdfs:comment "Communication is the exchange of an entity by two activities, one activity using the entity generated by the other." ;
+	dc:source <http://www.w3.org/ns/prov#> ;
+	rdfs:domain cdmc-lin:Activity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
+	rdfs:range cdmc-lin:Activity ;
+	rdfs:seeAlso <http://www.w3.org/ns/prov#wasInformedBy> ;
+	.
+
+_:blank1
+	rdf:first cdmc-core:Agent ;
+	rdf:rest _:blank2 ;
+	.
+
+_:blank2
+	rdf:first cdmc-core:Resource ;
+	rdf:rest rdf:nil ;
+	.
+
+_:blank3
+	a owl:Class ;
+	owl:unionOf _:blank1 ;
+	.
+
+_:blank4
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:isPartOf ;
+	owl:someValuesFrom cdmc-lin:LineageReport ;
+	.
+

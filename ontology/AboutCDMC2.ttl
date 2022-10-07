@@ -1,0 +1,34 @@
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Classification
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Control
+# imports: https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Core
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Cost
+# imports: https://spec.edmcouncil.org/cdmc/ontology/DataQuality
+# imports: https://spec.edmcouncil.org/cdmc/ontology/DataUse
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Lineage
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Policy
+
+@prefix AboutCDMC: <https://spec.edmcouncil.org/cdmc/ontology/AboutCDMC#> .
+@prefix cdmc-cv: <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix v0: <https://edmcouncil.org/cdmc/v0/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/cdmc/ontology/AboutCDMC>
+	a owl:Ontology ;
+	owl:imports
+		<https://spec.edmcouncil.org/cdmc/ontology/Classification> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Control> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Core> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Cost> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/DataUse> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Lineage> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Policy>
+		;
+	owl:versionInfo "Created with TopBraid Composer" ;
+	.
+

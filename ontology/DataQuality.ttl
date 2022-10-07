@@ -1,0 +1,232 @@
+# imports: https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Core
+
+@prefix cdmc-core: <https://spec.edmcouncil.org/cdmc/ontology/Core/> .
+@prefix cdmc-cv: <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies/> .
+@prefix cdmc-dq: <https://spec.edmcouncil.org/cdmc/ontology/DataQuality/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/cdmc/ontology/DataQuality>
+	a owl:Ontology ;
+	owl:imports
+		<https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Core>
+		;
+	owl:versionInfo "Created with TopBraid Composer" ;
+	.
+
+cdmc-dq:BusinessContext
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Business Context" ;
+	rdfs:comment "A scoping for rules or concepts related to a particular business domain (could represent a company, an organization, or a particular project, for example)." ;
+	dc:source "CDMC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:DataQualityAssessment
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Data Quality Assessment" ;
+	rdfs:comment "The results of an evaluation of a given Data Quality Execution Rule against a particular Data Quality Measurement, determining whether a measurement successfully meets the constraints of the rule." ;
+	dc:source "CDMC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:DataQualityDimension
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Data Quality Dimension" ;
+	rdfs:comment "A category of measurement used to evaluate the degree to which data is fit-for-purpose." ;
+	dc:source "DCAM Glossary" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:seeAlso <http://www.w3.org/ns/dqv#Dimension> ;
+	.
+
+cdmc-dq:DataQualityDimensionCategory
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Data Quality Dimension Category" ;
+	rdfs:comment "A group of quality dimensions in which a common type of information is used as quality indicator." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:DataQualityExecutionRule
+	a owl:Class ;
+	rdfs:subClassOf
+		owl:Thing ,
+		_:blank3
+		;
+	rdfs:label "Data Quality Execution Rule" ;
+	rdfs:comment "A specific algorithm or logic that can be executed to implement a Data Quality Rule." ;
+	dc:source
+		"CDMC" ,
+		"DCAM Glossary"
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:DataQualityMeasurement
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Data Quality Measurement" ;
+	rdfs:comment "The evaluation of a given data asset against a specific quality metric." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:seeAlso <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+	.
+
+cdmc-dq:DataQualityMetric
+	a owl:Class ;
+	rdfs:subClassOf cdmc-core:Metric ;
+	rdfs:label "Data Quality Metric" ;
+	rdfs:comment "A standard to measure a quality dimension. An observation (instance of Data Quality Measurement) assigns a value in a given unit to a Metric." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:seeAlso <http://www.w3.org/ns/dqv#Metric> ;
+	.
+
+cdmc-dq:DataQualityReport
+	a owl:Class ;
+	rdfs:subClassOf
+		owl:Thing ,
+		_:blank2
+		;
+	rdfs:label "Data Quality Report" ;
+	rdfs:comment "A report that combines Data Quality Assessments to convey the overall data quality of a Data Asset." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:DataQualityRule
+	a owl:Class ;
+	rdfs:subClassOf
+		owl:Thing ,
+		_:blank1 ,
+		_:blank4
+		;
+	rdfs:label "Data Quality Rule" ;
+	rdfs:comment "A statement that applies an algorithm or logic to a data value to measure the fit-for-purpose of the value." ;
+	dc:source "DCAM Glossary" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	.
+
+cdmc-dq:inBusinessContext
+	a owl:ObjectProperty ;
+	rdfs:label "in business context" ;
+	rdfs:comment "Representation of the Business Context in which a particular Data Quality Rule is to be applied." ;
+	dc:source "CDMC" ;
+	rdfs:domain cdmc-dq:DataQualityRule ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:BusinessContext ;
+	.
+
+cdmc-dq:inDataQualityDimension
+	a owl:ObjectProperty ;
+	rdfs:label "in data quality dimension" ;
+	rdfs:comment """Representation of the dimension
+ a quality metric allows a measurement of.""" ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:domain cdmc-dq:DataQualityMetric ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityDimension ;
+	rdfs:seeAlso <http://www.w3.org/ns/dqv#inDimension> ;
+	.
+
+cdmc-dq:inDataQualityDimensionCategory
+	a owl:ObjectProperty ;
+	rdfs:label "in data quality dimension category" ;
+	rdfs:comment "Representation of the category a dimension is grouped in." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:domain cdmc-dq:DataQualityDimension ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityDimensionCategory ;
+	.
+
+cdmc-dq:isAssessmentOfMeasurement
+	a owl:ObjectProperty ;
+	rdfs:label "is assessment of measurement" ;
+	rdfs:comment "The Data Quality Measurement assessed by a Data Quality Assessment." ;
+	dc:source "CDMC" ;
+	rdfs:domain cdmc-dq:DataQualityAssessment ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityMeasurement ;
+	.
+
+cdmc-dq:isMeasurementOfDataQualityMetric
+	a owl:ObjectProperty ;
+	rdfs:label "is measurement of data quality metric" ;
+	rdfs:comment "Indicates the metric being observed." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:domain cdmc-dq:DataQualityMeasurement ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityMetric ;
+	rdfs:seeAlso <http://www.w3.org/ns/dqv#isMeasurementOf> ;
+	.
+
+cdmc-dq:isMeasurementOfResource
+	a owl:ObjectProperty ;
+	rdfs:label "is measurement of resource" ;
+	rdfs:comment "Refers to the resource on which the quality measurement is performed." ;
+	dc:source <http://www.w3.org/ns/dqv#> ;
+	rdfs:domain cdmc-dq:DataQualityMeasurement ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-core:Resource ;
+	.
+
+cdmc-dq:isRequirementForMetric
+	a owl:ObjectProperty ;
+	rdfs:label "is requirement for metric" ;
+	rdfs:comment "The Data Quality Metric for which this Data Quality Execution Rule is a requirement." ;
+	dc:source "CDMC" ;
+	rdfs:domain cdmc-dq:DataQualityExecutionRule ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityMetric ;
+	.
+
+cdmc-dq:reportsDataQualityFor
+	a owl:ObjectProperty ;
+	rdfs:label "reports data quality for" ;
+	rdfs:domain cdmc-dq:DataQualityReport ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-core:Resource ;
+	.
+
+cdmc-dq:wasAssessedAgainstRequirement
+	a owl:ObjectProperty ;
+	rdfs:label "was assessed against requirement" ;
+	rdfs:comment "The Data Quality Execution Rule against which this Data Quality Assessment was made." ;
+	dc:source "CDMC" ;
+	rdfs:domain cdmc-dq:DataQualityAssessment ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
+	rdfs:range cdmc-dq:DataQualityExecutionRule ;
+	.
+
+_:blank1
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:appliesTo ;
+	owl:someValuesFrom cdmc-cv:DataElementConcept ;
+	.
+
+_:blank2
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:contains ;
+	owl:someValuesFrom cdmc-dq:DataQualityAssessment ;
+	.
+
+_:blank3
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:implements ;
+	owl:someValuesFrom cdmc-dq:DataQualityRule ;
+	.
+
+_:blank4
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:references ;
+	owl:someValuesFrom cdmc-dq:DataQualityDimension ;
+	.
+

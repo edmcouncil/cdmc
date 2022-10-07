@@ -1,0 +1,168 @@
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Classification
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Core
+
+@prefix cdmc-cls: <https://spec.edmcouncil.org/cdmc/ontology/Classification/> .
+@prefix cdmc-core: <https://spec.edmcouncil.org/cdmc/ontology/Core/> .
+@prefix cdmc-ctl: <https://spec.edmcouncil.org/cdmc/ontology/Control/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/cdmc/ontology/Control>
+	a owl:Ontology ;
+	owl:imports
+		<https://spec.edmcouncil.org/cdmc/ontology/Classification> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Core>
+		;
+	owl:versionInfo "Created with TopBraid Composer" ;
+	.
+
+cdmc-ctl:Control
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Control" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:ControlInstance
+	a owl:Class ;
+	rdfs:subClassOf
+		owl:Thing ,
+		_:blank4 ,
+		_:blank5
+		;
+	rdfs:label "Control Instance" ;
+	rdfs:comment "The implementation of a Control for a Data Asset." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:ControlMetric
+	a owl:Class ;
+	rdfs:subClassOf cdmc-core:Metric ;
+	rdfs:label "Control Metric" ;
+	rdfs:comment "The definition of a measurement that determines the effectiveness of a Control." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:ControlMetricMeasurement
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Control Metric Measurement" ;
+	rdfs:comment "The value of a Control Metric at a point in time." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:ControlMetricThreshold
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Control Metric Threshold" ;
+	rdfs:comment "The value against which a Control Metric Measurement is compared to assess the effectiveness of a Control." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:SecurityControl
+	a owl:Class ;
+	rdfs:subClassOf
+		cdmc-ctl:Control ,
+		_:blank1
+		;
+	rdfs:label "Security Control" ;
+	rdfs:comment "A safeguard or countermeasure meeting a set of defined security requirements to protect data." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:SecurityControlInstance
+	a owl:Class ;
+	rdfs:subClassOf
+		cdmc-ctl:ControlInstance ,
+		_:blank2 ,
+		_:blank3
+		;
+	rdfs:label "Security Control Instance" ;
+	rdfs:comment "The implementation of a Security Control for a specific Data Service or Database Storage instance." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:ThresholdConstraint
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Threshold Constraint" ;
+	rdfs:comment "The relationship between a Control Metric Measurement and the corresponding Control Metric Threshold that determines the effectiveness of a Control." ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	.
+
+cdmc-ctl:hasConstraintType
+	a owl:ObjectProperty ;
+	rdfs:label "has constraint type" ;
+	rdfs:comment "The association of a constraint with a concept" ;
+	rdfs:domain cdmc-ctl:ControlMetricThreshold ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	rdfs:range cdmc-ctl:ThresholdConstraint ;
+	.
+
+cdmc-ctl:hasLimitOf
+	a owl:ObjectProperty ;
+	rdfs:label "has limit of" ;
+	rdfs:comment "The use of a concept as a limit against which the value of a measurement of another concept can be compared" ;
+	rdfs:domain cdmc-ctl:ControlMetric ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	rdfs:range cdmc-ctl:ControlMetricThreshold ;
+	.
+
+cdmc-ctl:isEvidencedBy
+	a owl:ObjectProperty ;
+	rdfs:label "is evidenced by" ;
+	rdfs:domain cdmc-ctl:ControlInstance ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	rdfs:range cdmc-ctl:ControlMetricMeasurement ;
+	.
+
+cdmc-ctl:isMeasuredBy
+	a owl:ObjectProperty ;
+	rdfs:label "is measured by" ;
+	rdfs:comment "The use of a concept to measure another concept" ;
+	rdfs:domain cdmc-ctl:Control ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	rdfs:range cdmc-ctl:ControlMetric ;
+	.
+
+cdmc-ctl:isMeasurementOf
+	a owl:ObjectProperty ;
+	rdfs:label "is measurement of" ;
+	rdfs:comment "The assignment of a concept as the value of another concept" ;
+	rdfs:domain cdmc-ctl:ControlMetricMeasurement ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
+	rdfs:range cdmc-ctl:ControlMetric ;
+	.
+
+_:blank1
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:appliesTo ;
+	owl:someValuesFrom cdmc-cls:InformationSensitivity ;
+	.
+
+_:blank2
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:appliesTo ;
+	owl:someValuesFrom cdmc-core:DataService ;
+	.
+
+_:blank3
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:appliesTo ;
+	owl:someValuesFrom cdmc-core:DatabaseStorage ;
+	.
+
+_:blank4
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:appliesTo ;
+	owl:someValuesFrom cdmc-core:Resource ;
+	.
+
+_:blank5
+	a owl:Restriction ;
+	owl:onProperty cdmc-core:implements ;
+	owl:someValuesFrom cdmc-ctl:Control ;
+	.
+
