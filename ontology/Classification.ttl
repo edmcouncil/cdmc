@@ -11,6 +11,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Classification>
 	a owl:Ontology ;
+	dct:abstract "This ontology deifnes concepts and classifers around data sensitivity and classification. " ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports <https://spec.edmcouncil.org/cdmc/ontology/Core> ;

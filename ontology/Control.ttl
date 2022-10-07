@@ -13,6 +13,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Control>
 	a owl:Ontology ;
+	dct:abstract "This ontology defines terms and constructis for measurement and control of data in the cloud. " ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports

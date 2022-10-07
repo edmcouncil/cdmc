@@ -12,6 +12,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Lineage>
 	a owl:Ontology ;
+	dct:abstract "This ontology provides concepts and relationships for tracking lineage of data in cloud data management. " ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports <https://spec.edmcouncil.org/cdmc/ontology/Core> ;

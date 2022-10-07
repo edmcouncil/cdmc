@@ -11,6 +11,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/Core>
 	a owl:Ontology ;
+	dct:abstract "This ontology about the basic concepts that are important for cloud data management, and are used in the other CDMC ontologies. " ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports <http://purl.org/dc/elements/1.1/> ;

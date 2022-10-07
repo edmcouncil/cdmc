@@ -13,6 +13,7 @@
 
 <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies>
 	a owl:Ontology ;
+	dct:abstract "This ontology defines metadata structures for defining data resources for cloud data management, including connections to other data management modeling systems like ISO 11179" ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports
