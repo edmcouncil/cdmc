@@ -12,6 +12,7 @@
 <https://spec.edmcouncil.org/cdmc/ontology/Lineage>
 	a owl:Ontology ;
 	<http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
+	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
 	owl:imports <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	owl:versionInfo "Created with TopBraid Composer" ;
 	.
