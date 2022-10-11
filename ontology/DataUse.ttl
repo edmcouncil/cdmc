@@ -87,7 +87,7 @@ cdmc-du:Usage
 		_:blank4
 		;
 	rdfs:label "Usage" ;
-	rdfs:comment "Use of a Data Asset by an Agent via a Data Service for one or more specified Purposes" ;
+	rdfs:comment "use of a Data Asset by an Agent via a Data Service for one or more specified Purposes" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:seeAlso "egeria:Data Processing Description" ;
 	.

@@ -21,7 +21,7 @@
 cdmc-core:Agent
 	a owl:Class ;
 	rdfs:label "Agent" ;
-	rdfs:comment "Something that bears some form of responsibility for an activity taking place" ;
+	rdfs:comment "something that bears some form of responsibility for an activity taking place" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso
@@ -177,7 +177,7 @@ cdmc-core:PeriodOfTime
 cdmc-core:Resource
 	a owl:Class ;
 	rdfs:label "Resource" ;
-	rdfs:comment "Resource published or curated by a single agent" ;
+	rdfs:comment "resource published or curated by a single agent" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso "" ;

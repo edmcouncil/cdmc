@@ -192,7 +192,7 @@ cdmc-cv:Thesaurus
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cv:BusinessGlossary ;
 	rdfs:label "Thesaurus" ;
-	rdfs:comment "Business Glossary that includes synonyms between terms" ;
+	rdfs:comment "business glossary that includes synonyms between terms" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	.
@@ -204,7 +204,7 @@ cdmc-cv:ValueDomain
 		_:blank5
 		;
 	rdfs:label "Value Domain" ;
-	rdfs:comment "Contains the allowed values for a data element" ;
+	rdfs:comment "the set of allowed values for a data element" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso <https://iso.org/iso-11179/v0/ValueDomain> ;

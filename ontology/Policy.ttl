@@ -23,13 +23,14 @@
 		<https://spec.edmcouncil.org/cdmc/ontology/DataUse>
 		;
 	owl:versionInfo "Created with TopBraid Composer" ;
+	<http://www.w3.org/2004/02/skos/core#scopeNote> "If the Prohibition has been infringed by the action being exercised, then all of the remedies MUST be fulfilled to set the state of the Prohibition to not infringed." ;
 	.
 
 cdmc-policy:Constraint
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Constraint" ;
-	rdfs:comment "As expression that compares two operands (which are not Constraints) by one relational operator. If the comparison returns a match the Constraint is satisfied, otherwise it is not satisfied" ;
+	rdfs:comment "expression that compares two operands (which are not Constraints) by one relational operator. If the comparison returns a match the Constraint is satisfied, otherwise it is not satisfied" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -38,7 +39,7 @@ cdmc-policy:Duty
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Duty" ;
-	rdfs:comment "Duty is the obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action, with all refinements satisfied, has been exercised" ;
+	rdfs:comment "obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action, with all refinements satisfied, has been exercised" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso "" ;
@@ -67,7 +68,7 @@ cdmc-policy:Permission
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Permission" ;
-	rdfs:comment "Permission allows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled" ;
+	rdfs:comment "rule that allows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso <http://www.w3.org/ns/odrl/2/Permission> ;
@@ -101,7 +102,7 @@ cdmc-policy:Prohibition
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Prohibition" ;
-	rdfs:comment "Prohibition disallows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied. If the Prohibition has been infringed by the action being exercised, then all of the remedies MUST be fulfilled to set the state of the Prohibition to not infringed" ;
+	rdfs:comment "rule that disallows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
