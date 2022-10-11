@@ -22,7 +22,7 @@ cdmc-cls:Authority
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cls:DataClassification ;
 	rdfs:label "Authority" ;
-	rdfs:comment "A classification of the information within a data asset that indicates whether it is considered authoritative within the organization." ;
+	rdfs:comment "classification of the information within a data asset that indicates whether it is considered authoritative within the organization" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;
 	.
 
@@ -30,7 +30,7 @@ cdmc-cls:ClassificationOccurrence
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Classification Occurrence" ;
-	rdfs:comment "An instance of applying a Data Classification to a Resource." ;
+	rdfs:comment "instance of applying a Data Classification to a Resource" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;
 	.
@@ -39,7 +39,7 @@ cdmc-cls:DataClassification
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Data Classification" ;
-	rdfs:comment "A category that organizes data for its most effective and efficient use." ;
+	rdfs:comment "category that organizes data for its most effective and efficient use" ;
 	dc:source
 		"CDMC" ,
 		"DCAM"
@@ -51,7 +51,7 @@ cdmc-cls:InformationCriticality
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cls:DataClassification ;
 	rdfs:label "Information Criticality" ;
-	rdfs:comment "A classification of the degree to which an organization depends on a resource for the success of one or more business functions." ;
+	rdfs:comment "classification of the degree to which an organization depends on a resource for the success of one or more business functions" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;
 	.
 
@@ -59,7 +59,7 @@ cdmc-cls:InformationSensitivity
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cls:DataClassification ;
 	rdfs:label "Information Sensitivity" ;
-	rdfs:comment "A classification of the information within a data asset that indicates the level of control and protection that must be applied to the asset due to the nature of the data and its sensitivity or importance to the organization or to the subject of the data" ;
+	rdfs:comment "classification of the information within a data asset that indicates the level of control and protection that must be applied to the asset due to the nature of the data and its sensitivity or importance to the organization or to the subject of the data" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;
 	.

@@ -23,7 +23,7 @@ cdmc-du:Action
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Action" ;
-	rdfs:comment "An operation that can be exercised on an Asset. An Action is associated with the Asset via the action property in a Rule." ;
+	rdfs:comment "operation that can be exercised on an Asset. An Action is associated with the Asset via the action property in a Rule" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:seeAlso "egeria:Data Processing Action" ;
@@ -33,7 +33,7 @@ cdmc-du:DataSharingAgreement
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Data Sharing Agreement" ;
-	rdfs:comment "An agreement that sets out a common set of rules between the data producer and data consumer that establishes terms and restrictions of the use of consumed data." ;
+	rdfs:comment "agreement that sets out a common set of rules between the data producer and data consumer that establishes terms and restrictions of the use of consumed data" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	.
@@ -46,7 +46,7 @@ cdmc-du:Entitlement
 		_:blank2
 		;
 	rdfs:label "Entitlement" ;
-	rdfs:comment "A status granted to a person or group of persons representing their permission to access a specific data asset or any data asset with specific scope and characteristics." ;
+	rdfs:comment "status granted to a person or group of persons representing their permission to access a specific data asset or any data asset with specific scope and characteristics" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	.
 
@@ -54,7 +54,7 @@ cdmc-du:Purpose
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Purpose" ;
-	rdfs:comment "A reason for which an action is performed." ;
+	rdfs:comment "reason for which an action is performed" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:seeAlso "egeria:Data Processing Purpose" ;
 	.
@@ -66,7 +66,7 @@ cdmc-du:ServiceLevelAgreement
 		_:blank3
 		;
 	rdfs:label "Service Level Agreement" ;
-	rdfs:comment "An overall agreement with a provider on what is provided, how it is supported, times, locations, costs, performance, responsibilities, etc." ;
+	rdfs:comment "overall agreement with a provider on what is provided, how it is supported, times, locations, costs, performance, responsibilities, etc" ;
 	dc:source "CDMC Training Materials" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	.
@@ -75,7 +75,7 @@ cdmc-du:ServiceLevelObjective
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Service Level Objective" ;
-	rdfs:comment "A component of the SLA covering measurable (quantifiable) aspects of the agreement to objectively monitor performance of the provider against the overall agreement." ;
+	rdfs:comment "component of the SLA covering measurable (quantifiable) aspects of the agreement to objectively monitor performance of the provider against the overall agreement" ;
 	dc:source "CDMC Training Materials" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	.

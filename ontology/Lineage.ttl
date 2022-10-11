@@ -23,7 +23,7 @@ cdmc-lin:Activity
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Activity" ;
-	rdfs:comment "Something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+	rdfs:comment "Something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	rdfs:seeAlso <http://www.w3.org/ns/prov#Activity> ;
@@ -33,7 +33,7 @@ cdmc-lin:Derivation
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Derivation" ;
-	rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the creation of a new entity as a copy of a pre-existing entity." ;
+	rdfs:comment "derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the creation of a new entity as a copy of a pre-existing entity" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	rdfs:seeAlso <http://www.w3.org/ns/prov#Derivation> ;
@@ -43,7 +43,7 @@ cdmc-lin:Entity
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Entity" ;
-	rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
+	rdfs:comment "entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	rdfs:seeAlso <http://www.w3.org/ns/prov#Entity> ;
@@ -57,7 +57,7 @@ cdmc-lin:LineageRecord
 		_:blank4
 		;
 	rdfs:label "Lineage Record" ;
-	rdfs:comment "Information about the movement and transformation of data from a point of origin to its final destination." ;
+	rdfs:comment "Information about the movement and transformation of data from a point of origin to its final destination" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	.
 
@@ -65,7 +65,7 @@ cdmc-lin:LineageReport
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Lineage Report" ;
-	rdfs:comment "A report that provides information about a number of movements and transformations of data from a point of origin to its final destination." ;
+	rdfs:comment "report that provides information about a number of movements and transformations of data from a point of origin to its final destination" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	.
 
@@ -73,7 +73,7 @@ cdmc-lin:Revision
 	a owl:Class ;
 	rdfs:subClassOf cdmc-lin:Derivation ;
 	rdfs:label "Revision" ;
-	rdfs:comment "A revision is a derivation for which the resulting entity is a revised version of some original." ;
+	rdfs:comment "revision is a derivation for which the resulting entity is a revised version of some original" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	rdfs:seeAlso <http://www.w3.org/ns/prov#Revision> ;

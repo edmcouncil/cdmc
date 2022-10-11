@@ -21,7 +21,7 @@
 cdmc-core:Agent
 	a owl:Class ;
 	rdfs:label "Agent" ;
-	rdfs:comment "Something that bears some form of responsibility for an activity taking place." ;
+	rdfs:comment "Something that bears some form of responsibility for an activity taking place" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso
@@ -37,7 +37,7 @@ cdmc-core:AgentInRole
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Agent In Role" ;
-	rdfs:comment "The fulfilment of a specified role by an agent." ;
+	rdfs:comment "fulfilment of a specified role by an agent" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	.
 
@@ -45,7 +45,7 @@ cdmc-core:Api
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:DataService ;
 	rdfs:label "API" ;
-	rdfs:comment "An abstract set of methods that can be used to interface with a computer system." ;
+	rdfs:comment "abstract set of methods that can be used to interface with a computer system" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	.
@@ -57,7 +57,7 @@ cdmc-core:Catalog
 		_:blank8
 		;
 	rdfs:label "Catalog" ;
-	rdfs:comment "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)" ;
+	rdfs:comment "curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#Catalog> ;
@@ -67,7 +67,7 @@ cdmc-core:CatalogRecord
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Catalog Record" ;
-	rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource." ;
+	rdfs:comment "record in a catalog, describing the registration of a single dcat:Resource" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#CatalogRecord> ;
@@ -77,7 +77,7 @@ cdmc-core:DataAsset
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Resource ;
 	rdfs:label "Data Asset" ;
-	rdfs:comment "A data asset is any collection of data owned by an organization that is considered to have intrinsic value." ;
+	rdfs:comment "data asset is any collection of data owned by an organization that is considered to have intrinsic value" ;
 	dc:source "DCAM Glossary" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso
@@ -90,7 +90,7 @@ cdmc-core:DataService
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Resource ;
 	rdfs:label "Data Service" ;
-	rdfs:comment "A collection of operations that provides access to one or more datasets or data processing functions." ;
+	rdfs:comment "collection of operations that provides access to one or more datasets or data processing functions" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#DataService> ;
@@ -100,7 +100,7 @@ cdmc-core:DataSet
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:DataAsset ;
 	rdfs:label "Data Set" ;
-	rdfs:comment "An organized collection of data made available for consumption." ;
+	rdfs:comment "organized collection of data made available for consumption" ;
 	dc:source "DCAM Glossary" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso
@@ -113,7 +113,7 @@ cdmc-core:DatabaseAccessService
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:DataService ;
 	rdfs:label "Database Access Service" ;
-	rdfs:comment "An organized collection of data stored and accessed electronically from a computer system." ;
+	rdfs:comment "organized collection of data stored and accessed electronically from a computer system" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	cdmc-core:field_reference "PC.com" ;
@@ -123,7 +123,7 @@ cdmc-core:DatabaseStorage
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Database Storage" ;
-	rdfs:comment "The physical media on which the serialization of a data set is persisted." ;
+	rdfs:comment "physical media on which the serialization of a data set is persisted" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	.
 
@@ -131,7 +131,7 @@ cdmc-core:Distribution
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Distribution" ;
-	rdfs:comment "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)." ;
+	rdfs:comment "specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#Distribution> ;
@@ -141,7 +141,7 @@ cdmc-core:Location
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Location" ;
-	rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth." ;
+	rdfs:comment "location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	.
@@ -150,16 +150,17 @@ cdmc-core:MediaType
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Media Type" ;
-	rdfs:comment "The media type of the distribution as defined by IANA." ;
+	rdfs:comment "indicator of the nature and format of a document, file, or assortment of bytes" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
+	rdfs:seeAlso <https://www.iana.org/assignments/media-types> ;
 	.
 
 cdmc-core:Metric
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Metric" ;
-	rdfs:comment "A measure of quantitative assessment" ;
+	rdfs:comment "measure of quantitative assessment" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	.
 
@@ -167,7 +168,7 @@ cdmc-core:PeriodOfTime
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Period of Time" ;
-	rdfs:comment "An interval of time that is named or defined by its start and end dates." ;
+	rdfs:comment "interval of time that is named or defined by its start and end dates" ;
 	dc:source <http://purl.org/dc/terms/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso dct:PeriodOfTime ;
@@ -176,7 +177,7 @@ cdmc-core:PeriodOfTime
 cdmc-core:Resource
 	a owl:Class ;
 	rdfs:label "Resource" ;
-	rdfs:comment "Resource published or curated by a single agent." ;
+	rdfs:comment "Resource published or curated by a single agent" ;
 	dc:source <http://www.w3.org/ns/dcat#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso "" ;
@@ -186,7 +187,7 @@ cdmc-core:Role
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Role" ;
-	rdfs:comment "The function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships." ;
+	rdfs:comment "function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships" ;
 	dc:source <http://www.w3.org/ns/prov#> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#Role> ;

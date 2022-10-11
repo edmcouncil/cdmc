@@ -29,7 +29,7 @@ cdmc-policy:Constraint
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Constraint" ;
-	rdfs:comment "As expression that compares two operands (which are not Constraints) by one relational operator. If the comparison returns a match the Constraint is satisfied, otherwise it is not satisfied." ;
+	rdfs:comment "As expression that compares two operands (which are not Constraints) by one relational operator. If the comparison returns a match the Constraint is satisfied, otherwise it is not satisfied" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -38,7 +38,7 @@ cdmc-policy:Duty
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Duty" ;
-	rdfs:comment "A Duty is the obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action, with all refinements satisfied, has been exercised." ;
+	rdfs:comment "Duty is the obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action, with all refinements satisfied, has been exercised" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso "" ;
@@ -48,7 +48,7 @@ cdmc-policy:Jurisdiction
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Jurisdiction" ;
-	rdfs:comment "The extent or range of judicial, law enforcement, or other authority." ;
+	rdfs:comment "extent or range of judicial, law enforcement, or other authority" ;
 	dc:source <http://purl.org/dc/terms/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso dct:Jurisdiction ;
@@ -58,7 +58,7 @@ cdmc-policy:LifecyclePolicy
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Policy ;
 	rdfs:label "Lifecycle Policy" ;
-	rdfs:comment "A policy governing the lifecycle of data." ;
+	rdfs:comment "policy governing the lifecycle of data" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -67,7 +67,7 @@ cdmc-policy:Permission
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Permission" ;
-	rdfs:comment "A Permission allows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled." ;
+	rdfs:comment "Permission allows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso <http://www.w3.org/ns/odrl/2/Permission> ;
@@ -82,7 +82,7 @@ cdmc-policy:Policy
 		_:blank4
 		;
 	rdfs:label "Policy" ;
-	rdfs:comment "A high level directive that expresses goals and represents management expectations for legal, regulatory and/or organizational requirements." ;
+	rdfs:comment "high level directive that expresses goals and represents management expectations for legal, regulatory and/or organizational requirements" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:seeAlso "" ;
@@ -92,7 +92,7 @@ cdmc-policy:PrivacyPolicy
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Policy ;
 	rdfs:label "Privacy Policy" ;
-	rdfs:comment "A policy governing the privacy of data." ;
+	rdfs:comment "policy governing the privacy of data" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -101,7 +101,7 @@ cdmc-policy:Prohibition
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Rule ;
 	rdfs:label "Prohibition" ;
-	rdfs:comment "A Prohibition disallows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied. If the Prohibition has been infringed by the action being exercised, then all of the remedies MUST be fulfilled to set the state of the Prohibition to not infringed." ;
+	rdfs:comment "Prohibition disallows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied. If the Prohibition has been infringed by the action being exercised, then all of the remedies MUST be fulfilled to set the state of the Prohibition to not infringed" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -114,7 +114,7 @@ cdmc-policy:Regulation
 		_:blank8
 		;
 	rdfs:label "Regulation" ;
-	rdfs:comment "A rule or directive made and maintained by an authority." ;
+	rdfs:comment "rule or directive made and maintained by an authority" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -123,7 +123,7 @@ cdmc-policy:RiskPolicy
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Policy ;
 	rdfs:label "Risk Policy" ;
-	rdfs:comment "A policy governing risk of data." ;
+	rdfs:comment "policy governing risk of data" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -136,7 +136,7 @@ cdmc-policy:Rule
 		_:blank5
 		;
 	rdfs:label "Rule" ;
-	rdfs:comment "A permission, prohibition or duty. The Rule class represents the common characteristics of these three classes. A Rule class MUST be disjoint with all other Rule subclasses." ;
+	rdfs:comment "permission, prohibition or duty. The Rule class represents the common characteristics of these three classes. A Rule class MUST be disjoint with all other Rule subclasses" ;
 	dc:source <http://www.w3.org/ns/odrl/2/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -145,7 +145,7 @@ cdmc-policy:SecurityPolicy
 	a owl:Class ;
 	rdfs:subClassOf cdmc-policy:Policy ;
 	rdfs:label "Security Policy" ;
-	rdfs:comment "A policy governing the security of data." ;
+	rdfs:comment "policy governing the security of data" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -157,7 +157,7 @@ cdmc-policy:Standard
 		_:blank7
 		;
 	rdfs:label "Standard" ;
-	rdfs:comment "A rule or set of rules that defines expected actions for achieving compliance to associated policies." ;
+	rdfs:comment "rule or set of rules that defines expected actions for achieving compliance to associated policies" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.

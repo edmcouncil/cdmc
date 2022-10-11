@@ -22,7 +22,7 @@ cdmc-cost:ComputeCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Compute Cost" ;
-	rdfs:comment "The cost associated with processing data." ;
+	rdfs:comment "cost associated with processing data" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 
@@ -30,7 +30,7 @@ cdmc-cost:Cost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Metric ;
 	rdfs:label "Cost" ;
-	rdfs:comment "An amount that has to be paid or spent to buy or obtain something." ;
+	rdfs:comment "amount that has to be paid or spent to buy or obtain something" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 
@@ -38,7 +38,7 @@ cdmc-cost:EgressCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Egress Cost" ;
-	rdfs:comment "The cost associated with data leaving a cloud defined perimeter, such as a network or storage device." ;
+	rdfs:comment "cost associated with data leaving a cloud defined perimeter, such as a network or storage device" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 
@@ -46,7 +46,7 @@ cdmc-cost:IngressCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Ingress Cost" ;
-	rdfs:comment "The cost associated with data entering a cloud defined perimeter, such as a network or storage device." ;
+	rdfs:comment "cost associated with data entering a cloud defined perimeter, such as a network or storage device" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 
@@ -61,7 +61,7 @@ cdmc-cost:StorageCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Storage Cost" ;
-	rdfs:comment "The cost associated with storing data in a cloud defined storage device, which may be at rest or in motion." ;
+	rdfs:comment "cost associated with storing data in a cloud defined storage device, which may be at rest or in motion" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 

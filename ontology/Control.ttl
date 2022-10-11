@@ -38,7 +38,7 @@ cdmc-ctl:ControlInstance
 		_:blank5
 		;
 	rdfs:label "Control Instance" ;
-	rdfs:comment "The implementation of a Control for a Data Asset." ;
+	rdfs:comment "implementation of a Control for a Data Asset" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -46,7 +46,7 @@ cdmc-ctl:ControlMetric
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Metric ;
 	rdfs:label "Control Metric" ;
-	rdfs:comment "The definition of a measurement that determines the effectiveness of a Control." ;
+	rdfs:comment "definition of a measurement that determines the effectiveness of a Control" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -54,7 +54,7 @@ cdmc-ctl:ControlMetricMeasurement
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Control Metric Measurement" ;
-	rdfs:comment "The value of a Control Metric at a point in time." ;
+	rdfs:comment "value of a Control Metric at a point in time" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -62,7 +62,7 @@ cdmc-ctl:ControlMetricThreshold
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Control Metric Threshold" ;
-	rdfs:comment "The value against which a Control Metric Measurement is compared to assess the effectiveness of a Control." ;
+	rdfs:comment "value against which a Control Metric Measurement is compared to assess the effectiveness of a Control" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -73,7 +73,7 @@ cdmc-ctl:SecurityControl
 		_:blank1
 		;
 	rdfs:label "Security Control" ;
-	rdfs:comment "A safeguard or countermeasure meeting a set of defined security requirements to protect data." ;
+	rdfs:comment "safeguard or countermeasure meeting a set of defined security requirements to protect data" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -85,7 +85,7 @@ cdmc-ctl:SecurityControlInstance
 		_:blank3
 		;
 	rdfs:label "Security Control Instance" ;
-	rdfs:comment "The implementation of a Security Control for a specific Data Service or Database Storage instance." ;
+	rdfs:comment "implementation of a Security Control for a specific Data Service or Database Storage instance" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
@@ -93,7 +93,7 @@ cdmc-ctl:ThresholdConstraint
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Threshold Constraint" ;
-	rdfs:comment "The relationship between a Control Metric Measurement and the corresponding Control Metric Threshold that determines the effectiveness of a Control." ;
+	rdfs:comment "relationship between a Control Metric Measurement and the corresponding Control Metric Threshold that determines the effectiveness of a Control" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
