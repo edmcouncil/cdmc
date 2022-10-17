@@ -100,7 +100,7 @@ cdmc-ctl:ThresholdConstraint
 cdmc-ctl:hasConstraintType
 	a owl:ObjectProperty ;
 	rdfs:label "has constraint type" ;
-	rdfs:comment "The association of a constraint with a concept" ;
+	rdfs:comment "specifies the Threshold Constraint that applies to the Control Metric Threshold of a Control Metric" ;
 	rdfs:domain cdmc-ctl:ControlMetricThreshold ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	rdfs:range cdmc-ctl:ThresholdConstraint ;
@@ -109,7 +109,7 @@ cdmc-ctl:hasConstraintType
 cdmc-ctl:hasLimitOf
 	a owl:ObjectProperty ;
 	rdfs:label "has limit of" ;
-	rdfs:comment "The use of a concept as a limit against which the value of a measurement of another concept can be compared" ;
+	rdfs:comment "indicates the use of a Control Metric Threshold as a limit against which the Control Metric Measurement of a Control can be compared" ;
 	rdfs:domain cdmc-ctl:ControlMetric ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	rdfs:range cdmc-ctl:ControlMetricThreshold ;
@@ -118,6 +118,7 @@ cdmc-ctl:hasLimitOf
 cdmc-ctl:isEvidencedBy
 	a owl:ObjectProperty ;
 	rdfs:label "is evidenced by" ;
+	rdfs:comment "indicates the use of a Control Metric Measurement to evidence of the existence of a Control Instance" ;
 	rdfs:domain cdmc-ctl:ControlInstance ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	rdfs:range cdmc-ctl:ControlMetricMeasurement ;
@@ -126,7 +127,7 @@ cdmc-ctl:isEvidencedBy
 cdmc-ctl:isMeasuredBy
 	a owl:ObjectProperty ;
 	rdfs:label "is measured by" ;
-	rdfs:comment "The use of a concept to measure another concept" ;
+	rdfs:comment "indicates the use of a Control Metric to measure the effectiveness of a Control" ;
 	rdfs:domain cdmc-ctl:Control ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	rdfs:range cdmc-ctl:ControlMetric ;
@@ -135,7 +136,7 @@ cdmc-ctl:isMeasuredBy
 cdmc-ctl:isMeasurementOf
 	a owl:ObjectProperty ;
 	rdfs:label "is measurement of" ;
-	rdfs:comment "The assignment of a concept as the value of another concept" ;
+	rdfs:comment "identifies the Control Metric to which a Control Metric Measurement applies" ;
 	rdfs:domain cdmc-ctl:ControlMetricMeasurement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	rdfs:range cdmc-ctl:ControlMetric ;

@@ -123,7 +123,7 @@ cdmc-dq:DataQualityRule
 cdmc-dq:inBusinessContext
 	a owl:ObjectProperty ;
 	rdfs:label "in business context" ;
-	rdfs:comment "Representation of the Business Context in which a particular Data Quality Rule is to be applied." ;
+	rdfs:comment "indicates a Business Context in which a Data Quality Rule is to be applied" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-dq:DataQualityRule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -133,8 +133,7 @@ cdmc-dq:inBusinessContext
 cdmc-dq:inDataQualityDimension
 	a owl:ObjectProperty ;
 	rdfs:label "in data quality dimension" ;
-	rdfs:comment """Representation of the dimension
- a quality metric allows a measurement of.""" ;
+	rdfs:comment "represents the Data Quality Dimension that a Data Quality Metric allows measurement of" ;
 	dc:source <http://www.w3.org/ns/dqv#> ;
 	rdfs:domain cdmc-dq:DataQualityMetric ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -145,7 +144,7 @@ cdmc-dq:inDataQualityDimension
 cdmc-dq:inDataQualityDimensionCategory
 	a owl:ObjectProperty ;
 	rdfs:label "in data quality dimension category" ;
-	rdfs:comment "Representation of the category a dimension is grouped in." ;
+	rdfs:comment "associates a Data Quality Dimension Category with a Data Quality Dimension" ;
 	dc:source <http://www.w3.org/ns/dqv#> ;
 	rdfs:domain cdmc-dq:DataQualityDimension ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -155,7 +154,7 @@ cdmc-dq:inDataQualityDimensionCategory
 cdmc-dq:isAssessmentOfMeasurement
 	a owl:ObjectProperty ;
 	rdfs:label "is assessment of measurement" ;
-	rdfs:comment "The Data Quality Measurement assessed by a Data Quality Assessment." ;
+	rdfs:comment "identifies a Data Quality Measurement included within a Data Quality Assessment" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-dq:DataQualityAssessment ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -165,7 +164,7 @@ cdmc-dq:isAssessmentOfMeasurement
 cdmc-dq:isMeasurementOfDataQualityMetric
 	a owl:ObjectProperty ;
 	rdfs:label "is measurement of data quality metric" ;
-	rdfs:comment "Indicates the metric being observed." ;
+	rdfs:comment "indicates the Data Quality Metric being observed by a Data Quality Measurement" ;
 	dc:source <http://www.w3.org/ns/dqv#> ;
 	rdfs:domain cdmc-dq:DataQualityMeasurement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -176,7 +175,7 @@ cdmc-dq:isMeasurementOfDataQualityMetric
 cdmc-dq:isMeasurementOfResource
 	a owl:ObjectProperty ;
 	rdfs:label "is measurement of resource" ;
-	rdfs:comment "Refers to the resource on which the quality measurement is performed." ;
+	rdfs:comment "identifies the Resource on which a Data Quality Measurement is performed" ;
 	dc:source <http://www.w3.org/ns/dqv#> ;
 	rdfs:domain cdmc-dq:DataQualityMeasurement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -186,7 +185,7 @@ cdmc-dq:isMeasurementOfResource
 cdmc-dq:isRequirementForMetric
 	a owl:ObjectProperty ;
 	rdfs:label "is requirement for metric" ;
-	rdfs:comment "The Data Quality Metric for which this Data Quality Execution Rule is a requirement." ;
+	rdfs:comment "identifies a Data Quality Metric that a Data Quality Execution Rule is involved in the production of" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-dq:DataQualityExecutionRule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
@@ -196,6 +195,7 @@ cdmc-dq:isRequirementForMetric
 cdmc-dq:reportsDataQualityFor
 	a owl:ObjectProperty ;
 	rdfs:label "reports data quality for" ;
+	rdfs:comment "identifies a Resource that is the subject of a Data Quality Report" ;
 	rdfs:domain cdmc-dq:DataQualityReport ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;
 	rdfs:range cdmc-core:Resource ;
@@ -204,7 +204,7 @@ cdmc-dq:reportsDataQualityFor
 cdmc-dq:wasAssessedAgainstRequirement
 	a owl:ObjectProperty ;
 	rdfs:label "was assessed against requirement" ;
-	rdfs:comment "The Data Quality Execution Rule against which this Data Quality Assessment was made." ;
+	rdfs:comment "identifies the Data Quality Execution Rule against which a Data Quality Assessment was performed" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-dq:DataQualityAssessment ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataQuality> ;

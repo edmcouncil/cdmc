@@ -67,7 +67,7 @@ cdmc-cls:InformationSensitivity
 cdmc-cls:appliedClassification
 	a owl:ObjectProperty ;
 	rdfs:label "applied classification" ;
-	rdfs:comment "The Data Classification that has been applied to a Resource." ;
+	rdfs:comment "indicates the Data Classification applied by a Classification Occurrence" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cls:ClassificationOccurrence ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;
@@ -77,7 +77,7 @@ cdmc-cls:appliedClassification
 cdmc-cls:classifiedResource
 	a owl:ObjectProperty ;
 	rdfs:label "classified resource" ;
-	rdfs:comment "The Resource to which a Data Classification has been applied." ;
+	rdfs:comment "identifies the Resource to which a Classification Occurrence applies a Data Classification" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cls:ClassificationOccurrence ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Classification> ;

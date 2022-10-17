@@ -95,6 +95,7 @@ cdmc-du:Usage
 cdmc-du:applicableIn
 	a owl:ObjectProperty ;
 	rdfs:label "applicable in" ;
+	rdfs:comment "specifies a geographic Location in which an Entitlement applies" ;
 	rdfs:domain cdmc-du:Entitlement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-core:Location ;
@@ -103,6 +104,7 @@ cdmc-du:applicableIn
 cdmc-du:authorizes
 	a owl:ObjectProperty ;
 	rdfs:label "authorizes" ;
+	rdfs:comment "specifies an Agent that an Entitlement authorizes" ;
 	rdfs:domain cdmc-du:Entitlement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-core:Agent ;
@@ -111,8 +113,7 @@ cdmc-du:authorizes
 cdmc-du:constrains
 	a owl:ObjectProperty ;
 	rdfs:label "constrains" ;
-	rdfs:comment """The fact
- that a concept acts as a constraint upon another concept""" ;
+	rdfs:comment "indicates that something acts as a constraint upon something else" ;
 	rdfs:domain cdmc-du:DataSharingAgreement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-du:Purpose ;
@@ -121,7 +122,7 @@ cdmc-du:constrains
 cdmc-du:exercisedAction
 	a owl:ObjectProperty ;
 	rdfs:label "exercised action" ;
-	rdfs:comment "The exercising of an Action by a Usage" ;
+	rdfs:comment "identifies an Action that was taken as part of a Usage" ;
 	rdfs:domain cdmc-du:Usage ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-du:Action ;
@@ -130,7 +131,7 @@ cdmc-du:exercisedAction
 cdmc-du:hasServiceLevelAgreement
 	a owl:ObjectProperty ;
 	rdfs:label "has service level agreement" ;
-	rdfs:comment "Indicates one or more SLA instances are includes as part of a Data Sharing Agreement." ;
+	rdfs:comment "identifies a Service Level Agreement that is includes as part of a Data Sharing Agreement." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-du:DataSharingAgreement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
@@ -140,6 +141,7 @@ cdmc-du:hasServiceLevelAgreement
 cdmc-du:informed
 	a owl:ObjectProperty ;
 	rdfs:label "informed" ;
+	rdfs:comment "indicates that a Data Service was consulted in the specified Usage of data" ;
 	rdfs:domain cdmc-core:DataService ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-du:Usage ;
@@ -148,7 +150,7 @@ cdmc-du:informed
 cdmc-du:usedBy
 	a owl:ObjectProperty ;
 	rdfs:label "used by" ;
-	rdfs:comment "The indication of the Agent associated with a Usage" ;
+	rdfs:comment "identifies an Agent associated with a Usage" ;
 	rdfs:domain cdmc-du:Usage ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-core:Agent ;
@@ -157,7 +159,7 @@ cdmc-du:usedBy
 cdmc-du:usedFor
 	a owl:ObjectProperty ;
 	rdfs:label "used for" ;
-	rdfs:comment "The association of a Purpose with a Usage" ;
+	rdfs:comment "identifies a Purpose associated with a Usage" ;
 	rdfs:domain cdmc-du:Usage ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-du:Purpose ;

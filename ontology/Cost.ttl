@@ -68,7 +68,7 @@ cdmc-cost:StorageCost
 cdmc-cost:incurs
 	a owl:ObjectProperty ;
 	rdfs:label "incurs" ;
-	rdfs:comment "The acquisition of a liability" ;
+	rdfs:comment "specifies the Cost that is incurred by somethiing" ;
 	rdfs:domain [] ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-cost:Cost ;
