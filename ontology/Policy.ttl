@@ -166,7 +166,7 @@ cdmc-policy:Standard
 cdmc-policy:appliesContraint
 	a owl:ObjectProperty ;
 	rdfs:label "applies contraint" ;
-	rdfs:comment "Constraint to be applied as part of the Rule evaluation." ;
+	rdfs:comment "specifies a Constraint that is enforced by a Rule" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-policy:Rule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
@@ -177,7 +177,7 @@ cdmc-policy:appliesContraint
 cdmc-policy:coversJusrisdiction
 	a owl:ObjectProperty ;
 	rdfs:label "covers jusrisdiction" ;
-	rdfs:comment "The jusrisdiction that the dataset covers." ;
+	rdfs:comment "identifies a Jusrisdiction that applies to a Resource" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-core:Resource ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
@@ -187,8 +187,7 @@ cdmc-policy:coversJusrisdiction
 cdmc-policy:creates
 	a owl:ObjectProperty ;
 	rdfs:label "creates" ;
-	rdfs:comment """The creation of a Resource by 
-Rule.""" ;
+	rdfs:comment "identifies a Resource that is created by a Rule" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-policy:Rule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
@@ -198,7 +197,7 @@ Rule.""" ;
 cdmc-policy:generates
 	a owl:ObjectProperty ;
 	rdfs:label "generates" ;
-	rdfs:comment "Cause the creation of or modification of a Policy." ;
+	rdfs:comment "identifies a Policy created or modified by a Data Sharing Agreement" ;
 	dc:source "CDMC" ;
 	rdfs:domain <https://spec.edmcouncil.org/cdmc/ontology/DataUse/DataSharingAgreement> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
@@ -208,7 +207,7 @@ cdmc-policy:generates
 cdmc-policy:hasAssignee
 	a owl:ObjectProperty ;
 	rdfs:label "has assignee" ;
-	rdfs:comment "Functional role who receives the details of the Rule." ;
+	rdfs:comment "specifies an Agent who receives the details of a Rule" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-policy:Rule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
@@ -219,7 +218,7 @@ cdmc-policy:hasAssignee
 cdmc-policy:hasAssignor
 	a owl:ObjectProperty ;
 	rdfs:label "has assignor" ;
-	rdfs:comment "Functional role who describes the Rule." ;
+	rdfs:comment "specifies the Agent who describes a Rule" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-policy:Rule ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
@@ -230,7 +229,7 @@ cdmc-policy:hasAssignor
 cdmc-policy:hasPolicy
 	a owl:ObjectProperty ;
 	rdfs:label "has policy" ;
-	rdfs:comment "The application of a Policy to a Resource" ;
+	rdfs:comment "specifies that a Policy applies to a Resource" ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-core:Resource ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
@@ -240,7 +239,7 @@ cdmc-policy:hasPolicy
 cdmc-policy:hasReach
 	a owl:ObjectProperty ;
 	rdfs:label "has reach" ;
-	rdfs:comment "Indicates the geopolitical area covered by the jurisdiction" ;
+	rdfs:comment "indicates the geopolitical area covered by a Jurisdiction" ;
 	rdfs:domain cdmc-policy:Jurisdiction ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:range cdmc-core:Location ;
@@ -250,7 +249,7 @@ cdmc-policy:hasReach
 cdmc-policy:influences
 	a owl:ObjectProperty ;
 	rdfs:label "influences" ;
-	rdfs:comment "The fact that a concept has an influence upon another concept" ;
+	rdfs:comment "indicates something else that is impacted by the nature of something" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	.
@@ -258,6 +257,7 @@ cdmc-policy:influences
 cdmc-policy:instantiates
 	a owl:ObjectProperty ;
 	rdfs:label "instantiates" ;
+	rdfs:comment "specifies a Rule that brings an Entitlement into effect" ;
 	rdfs:domain <https://spec.edmcouncil.org/cdmc/ontology/DataUse/Entitlement> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/DataUse> ;
 	rdfs:range cdmc-policy:Rule ;
@@ -266,6 +266,7 @@ cdmc-policy:instantiates
 cdmc-policy:specifies
 	a owl:ObjectProperty ;
 	rdfs:label "specifies" ;
+	rdfs:comment "identifies a Control that is required by a Policy" ;
 	rdfs:domain cdmc-policy:Policy ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Policy> ;
 	rdfs:range <https://spec.edmcouncil.org/cdmc/ontology/Control/Control> ;
