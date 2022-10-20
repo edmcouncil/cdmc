@@ -22,56 +22,56 @@ cdmc-cost:ComputeCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Compute Cost" ;
-	rdfs:comment "cost associated with processing data" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "cost associated with processing data" ;
 	.
 
 cdmc-cost:Cost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Metric ;
 	rdfs:label "Cost" ;
-	rdfs:comment "amount that has to be paid or spent to buy or obtain something" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "amount that has to be paid or spent to buy or obtain something" ;
 	.
 
 cdmc-cost:EgressCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Egress Cost" ;
-	rdfs:comment "cost associated with data leaving a cloud defined perimeter, such as a network or storage device" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "cost associated with data leaving a cloud defined perimeter, such as a network or storage device" ;
 	.
 
 cdmc-cost:IngressCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Ingress Cost" ;
-	rdfs:comment "cost associated with data entering a cloud defined perimeter, such as a network or storage device" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "cost associated with data entering a cloud defined perimeter, such as a network or storage device" ;
 	.
 
 cdmc-cost:NetworkCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Network Cost" ;
-	rdfs:comment "cost associated with data being transmitted through or within a cloud based network" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "cost associated with data being transmitted through or within a cloud based network" ;
 	.
 
 cdmc-cost:StorageCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Storage Cost" ;
-	rdfs:comment "cost associated with storing data in a cloud defined storage device, which may be at rest or in motion" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "cost associated with storing data in a cloud defined storage device, which may be at rest or in motion" ;
 	.
 
 cdmc-cost:incurs
 	a owl:ObjectProperty ;
 	rdfs:label "incurs" ;
-	rdfs:comment "specifies the Cost that is incurred by somethiing" ;
 	rdfs:domain [] ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-cost:Cost ;
+	<http://www.w3.org/2004/02/skos/core#definition> "specifies the Cost that is incurred by somethiing" ;
 	.
 
