@@ -138,15 +138,6 @@ cdmc-du:hasServiceLevelAgreement
 	rdfs:range cdmc-du:ServiceLevelAgreement ;
 	.
 
-cdmc-du:informed
-	a owl:ObjectProperty ;
-	rdfs:label "informed" ;
-	rdfs:comment "indicates that a Data Service was consulted in the specified Usage of data" ;
-	rdfs:domain cdmc-core:DataService ;
-	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
-	rdfs:range cdmc-du:Usage ;
-	.
-
 cdmc-du:usedBy
 	a owl:ObjectProperty ;
 	rdfs:label "used by" ;

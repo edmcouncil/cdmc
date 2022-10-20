@@ -27,6 +27,7 @@ cdmc-ctl:Control
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Control" ;
+	rdfs:comment "defined way to ensure control of Data Assets" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Control> ;
 	.
 
