@@ -72,6 +72,6 @@ cdmc-cost:incurs
 	rdfs:domain [] ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-cost:Cost ;
-	<http://www.w3.org/2004/02/skos/core#definition> "specifies the Cost that is incurred by somethiing" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "specifies the Cost that is incurred by something" ;
 	.
 
