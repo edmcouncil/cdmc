@@ -290,14 +290,6 @@ cdmc-cv:hasInput
 	rdfs:range cdmc-cv:DataElement ;
 	.
 
-cdmc-cv:hasSubject
-	a owl:ObjectProperty ;
-	rdfs:label "has subject" ;
-	rdfs:comment "identifies a Subject Area that is covered by a Data Model" ;
-	rdfs:domain cdmc-cv:DataModel ;
-	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
-	.
-
 cdmc-cv:hasTheme
 	a owl:ObjectProperty ;
 	rdfs:label "has theme" ;
