@@ -54,6 +54,7 @@ cdmc-cost:NetworkCost
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cost:Cost ;
 	rdfs:label "Network Cost" ;
+	rdfs:comment "cost associated with data being transmitted through or within a cloud based network" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Cost> ;
 	.
 

@@ -102,6 +102,7 @@ cdmc-cv:DataAttribute
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Data Attribute" ;
+	rdfs:comment "unit of information inside a data entity" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	.
 
@@ -179,13 +180,6 @@ cdmc-cv:Property
 		;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	<https://iso.org/iso-11179/v0/Property> "" ;
-	.
-
-cdmc-cv:SubjectArea
-	a owl:Class ;
-	rdfs:subClassOf owl:Thing ;
-	rdfs:label "subject area" ;
-	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	.
 
 cdmc-cv:Thesaurus
@@ -302,7 +296,6 @@ cdmc-cv:hasSubject
 	rdfs:comment "identifies a Subject Area that is covered by a Data Model" ;
 	rdfs:domain cdmc-cv:DataModel ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
-	rdfs:range cdmc-cv:SubjectArea ;
 	.
 
 cdmc-cv:hasTheme
