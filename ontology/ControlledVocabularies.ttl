@@ -27,27 +27,27 @@ cdmc-cv:BusinessElement
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cv:DataElementConcept ;
 	rdfs:label "Business Element" ;
-	rdfs:comment "unit of information that has a specific meaning in the context of a business process or collection of processes within a data domain" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unit of information that has a specific meaning in the context of a business process or collection of processes within a data domain" ;
 	.
 
 cdmc-cv:BusinessGlossary
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cv:ConceptGroup ;
 	rdfs:label "Business Glossary" ;
-	rdfs:comment "collection of term names and definitions from the perspective of the business process" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "collection of term names and definitions from the perspective of the business process" ;
 	.
 
 cdmc-cv:BusinessProcess
 	a owl:Class ;
 	rdfs:subClassOf <https://spec.edmcouncil.org/cdmc/ontology/Lineage/Activity> ;
 	rdfs:label "Business Process" ;
-	rdfs:comment "activity or set of activities that can accomplish a specific organizational goal" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "activity or set of activities that can accomplish a specific organizational goal" ;
 	cdmc-core:field_reference <https://searchcio.techtarget.com/definition/business-process> ;
 	.
 
@@ -55,17 +55,16 @@ cdmc-cv:Class
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Class" ;
-	rdfs:comment "description of a set of objects that share the same attributes, operations, methods, relationships, and semantics" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso <https://iso.org/iso-11179/v0/Class> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "description of a set of objects that share the same attributes, operations, methods, relationships, and semantics" ;
 	.
 
 cdmc-cv:Concept
 	a owl:Class ;
 	rdfs:subClassOf cdmc-core:Resource ;
 	rdfs:label "Concept" ;
-	rdfs:comment "unit of knowledge created by a unique combination of characteristics" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso
@@ -73,28 +72,29 @@ cdmc-cv:Concept
 		<https://iso.org/iso-11179/v0/Concept> ,
 		<https://iso.org/iso-25964/v0/Concept>
 		;
+	<http://www.w3.org/2004/02/skos/core#definition> "unit of knowledge created by a unique combination of characteristics" ;
 	.
 
 cdmc-cv:ConceptGroup
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Concept Group" ;
-	rdfs:comment "aggregation of one or more concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso
 		<http://www.w3.org/2004/02/skos/core#ConceptScheme> ,
 		<https://iso.org/iso-25964/v0/ConceptGroup>
 		;
+	<http://www.w3.org/2004/02/skos/core#definition> "aggregation of one or more concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below" ;
 	.
 
 cdmc-cv:ConceptualDomain
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Conceptual Domain" ;
-	rdfs:comment "set of concepts, not necessarily finite, where the concepts represent the meaning of the permissible values in a value domain" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso <https://iso.org/iso-11179/v0/ConceptualDomain> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "set of concepts, not necessarily finite, where the concepts represent the meaning of the permissible values in a value domain" ;
 	cdmc-core:field_reference <https://www.iso.org/obp/ui/#iso:std:iso-iec:11179:-1:ed-3:v1:en> ;
 	.
 
@@ -103,6 +103,7 @@ cdmc-cv:DataAttribute
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Data Attribute" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unit of information inside a data entity" ;
 	.
 
 cdmc-cv:DataElement
@@ -113,23 +114,23 @@ cdmc-cv:DataElement
 		_:blank7
 		;
 	rdfs:label "Data Element" ;
-	rdfs:comment "unit of data that is considered in context to be indivisible" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso <https://iso.org/iso-11179/v0/DataElement> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unit of data that is considered in context to be indivisible" ;
 	.
 
 cdmc-cv:DataElementConcept
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cv:Concept ;
 	rdfs:label "Data Element Concept" ;
-	rdfs:comment "concept that can be represented in the form of a data element, described independently of any particular representation" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso
 		<https://iso.org/iso-11179/v0/DataElementConcept> ,
 		<https://iso.org/iso-25964/v0/DataElementConcept>
 		;
+	<http://www.w3.org/2004/02/skos/core#definition> "concept that can be represented in the form of a data element, described independently of any particular representation" ;
 	.
 
 cdmc-cv:DataEntity
@@ -139,9 +140,9 @@ cdmc-cv:DataEntity
 		_:blank8
 		;
 	rdfs:label "Data Entity" ;
-	rdfs:comment "concept that represents a person, place or thing" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "concept that represents a person, place or thing" ;
 	.
 
 cdmc-cv:DataModel
@@ -151,9 +152,9 @@ cdmc-cv:DataModel
 		_:blank3
 		;
 	rdfs:label "Data Model" ;
-	rdfs:comment "model that presents the declarative structure of data through a defined scope and perspective, and to a given level of abstraction" ;
 	dc:source "DCAM" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "model that presents the declarative structure of data through a defined scope and perspective, and to a given level of abstraction" ;
 	.
 
 cdmc-cv:OperationalProcess
@@ -163,38 +164,31 @@ cdmc-cv:OperationalProcess
 		_:blank2
 		;
 	rdfs:label "Operational Process" ;
-	rdfs:comment "activity or set of activities that can accomplish a specific operational outcome" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "activity or set of activities that can accomplish a specific operational outcome" ;
 	.
 
 cdmc-cv:Property
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Property" ;
-	rdfs:comment "characteristic common to all members of a Class" ;
 	dc:source
 		"CDMC" ,
 		"iso-11179:"
 		;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "characteristic common to all members of a Class" ;
 	<https://iso.org/iso-11179/v0/Property> "" ;
-	.
-
-cdmc-cv:SubjectArea
-	a owl:Class ;
-	rdfs:subClassOf owl:Thing ;
-	rdfs:label "subject area" ;
-	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	.
 
 cdmc-cv:Thesaurus
 	a owl:Class ;
 	rdfs:subClassOf cdmc-cv:BusinessGlossary ;
 	rdfs:label "Thesaurus" ;
-	rdfs:comment "business glossary that includes synonyms between terms" ;
 	dc:source "CDMC" ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "business glossary that includes synonyms between terms" ;
 	.
 
 cdmc-cv:ValueDomain
@@ -204,10 +198,10 @@ cdmc-cv:ValueDomain
 		_:blank5
 		;
 	rdfs:label "Value Domain" ;
-	rdfs:comment "the set of allowed values for a data element" ;
 	dc:source <https://iso.org/iso-11179/v0/> ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:seeAlso <https://iso.org/iso-11179/v0/ValueDomain> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "the set of allowed values for a data element" ;
 	cdmc-core:field_reference <https://www.iso.org/obp/ui/#iso:std:iso-iec:11179:-1:ed-3:v1:en> ;
 	.
 
@@ -218,42 +212,42 @@ cdmc-cv:Workflow
 		_:blank4
 		;
 	rdfs:label "Workflow" ;
-	rdfs:comment "sequence of events through which a Business Process progresses from initiation to completion" ;
 	dc:source
 		"CDMC" ,
 		<https://www.oed.com>
 		;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "sequence of events through which a Business Process progresses from initiation to completion" ;
 	.
 
 cdmc-cv:composedOf
 	a owl:ObjectProperty ;
 	rdfs:label "composed of" ;
-	rdfs:comment "Business Processes can be hierarchical in nature, and this relationship reflects the composition of complex Business Processes out of simpler ones." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:BusinessProcess ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:BusinessProcess ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Business Process that is sub-processs wihin a higher-level Business Process" ;
 	.
 
 cdmc-cv:forClass
 	a owl:ObjectProperty ;
 	rdfs:label "for class" ;
-	rdfs:comment "The Class for which this Data Element Concept binds a particular Property." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:DataElementConcept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:Class ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Class for which a Data Element Concept binds a particular Property" ;
 	.
 
 cdmc-cv:forProperty
 	a owl:ObjectProperty ;
 	rdfs:label "for property" ;
-	rdfs:comment "The Property that is bound to a Class by this Data Element Concept." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:DataElementConcept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:Property ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Property that is bound to a Class by a Data Element Concept" ;
 	.
 
 cdmc-cv:hasAttribute
@@ -262,51 +256,43 @@ cdmc-cv:hasAttribute
 	rdfs:domain cdmc-cv:DataEntity ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:DataAttribute ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Data Attribute of a Data Entity" ;
 	.
 
 cdmc-cv:hasBroaderConcept
 	a owl:ObjectProperty ;
 	rdfs:label "has broader concept" ;
-	rdfs:comment "A concept that is more general in meaning than this one." ;
 	dc:source <http://www.w3.org/2004/02/skos/core#> ;
 	rdfs:domain cdmc-cv:Concept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:Concept ;
 	rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#broader> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Concept that is more general in meaning than another Concept" ;
 	.
 
 cdmc-cv:hasConceptualDomain
 	a owl:ObjectProperty ;
 	rdfs:label "has conceptual domain" ;
-	rdfs:comment "The Conceptual Domain that covers this Data Element Concept." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:DataElementConcept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:ConceptualDomain ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Conceptual Domain to which a Data Element Concept belongs" ;
 	.
 
 cdmc-cv:hasInput
 	a owl:ObjectProperty ;
 	rdfs:label "has input" ;
-	rdfs:comment "A Data Element that is an input to this Workflow." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:Workflow ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:DataElement ;
-	.
-
-cdmc-cv:hasSubject
-	a owl:ObjectProperty ;
-	rdfs:label "has subject" ;
-	rdfs:domain cdmc-cv:DataModel ;
-	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
-	rdfs:range cdmc-cv:SubjectArea ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Data Element that is an input to aWorkflow" ;
 	.
 
 cdmc-cv:hasTheme
 	a owl:ObjectProperty ;
 	rdfs:label "has theme" ;
-	rdfs:comment "A main category of the entity." ;
 	dc:source
 		"CDMC" ,
 		<http://www.w3.org/ns/dcat#>
@@ -315,41 +301,41 @@ cdmc-cv:hasTheme
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Lineage> ;
 	rdfs:range cdmc-cv:Concept ;
 	rdfs:seeAlso <http://www.w3.org/ns/dcat#theme> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "indicates the main Concept with which an Entity is aligned" ;
 	.
 
 cdmc-cv:hasThemes
 	a owl:ObjectProperty ;
 	rdfs:label "has themes" ;
-	rdfs:comment "A collection of concepts that describe, topically, the contents of a catalog." ;
 	rdfs:domain cdmc-core:Catalog ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-cv:ConceptGroup ;
+	<http://www.w3.org/2004/02/skos/core#definition> "indicates the Concept Group that describes, topically, the contents of a Catalog" ;
 	.
 
 cdmc-cv:hasTopConcept
 	a owl:ObjectProperty ;
 	rdfs:label "has top concept" ;
-	rdfs:comment "The property skos:hasTopConcept is, by convention, used to link a concept scheme to the SKOS concept(s) which are topmost in the hierarchical relations for that scheme." ;
 	dc:source <http://www.w3.org/2004/02/skos/core#> ;
 	rdfs:domain cdmc-cv:ConceptGroup ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:Concept ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Concept that is topmost in the hierarchical relations of a Concept Group" ;
 	.
 
 cdmc-cv:hasValueDomain
 	a owl:ObjectProperty ;
 	rdfs:label "has value domain" ;
-	rdfs:comment "The Value Domain of valid values for this Data Element." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:DataElement ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:ValueDomain ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Value Domain of valid values for a Data Element" ;
 	.
 
 cdmc-cv:inConceptGroup
 	a owl:ObjectProperty ;
 	rdfs:label "in concept group" ;
-	rdfs:comment "A concept group in which this concept is included." ;
 	dc:source
 		"CDMC" ,
 		<http://www.w3.org/2004/02/skos/core#>
@@ -358,35 +344,36 @@ cdmc-cv:inConceptGroup
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:ConceptGroup ;
 	rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#inScheme> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies the Concept Group in which a Concept is included" ;
 	.
 
 cdmc-cv:isRelatedTo
 	a owl:ObjectProperty ;
 	rdfs:label "is related to" ;
-	rdfs:comment "Signifies a semantic relationship between Concepts." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:Concept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:Concept ;
+	<http://www.w3.org/2004/02/skos/core#definition> "signifies a semantic relationship between Concepts" ;
 	.
 
 cdmc-cv:modeledAs
 	a owl:ObjectProperty ;
 	rdfs:label "modeled as" ;
-	rdfs:comment "The modelling of a Data Element Concept as a Data Attribute" ;
 	rdfs:domain cdmc-cv:DataElementConcept ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:DataAttribute ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Data Attribute that represents Data Element Concept in a model" ;
 	.
 
 cdmc-cv:usesDataElementConcept
 	a owl:ObjectProperty ;
 	rdfs:label "uses data element concept" ;
-	rdfs:comment "A Data Element Concept used by this Business Process." ;
 	dc:source "CDMC" ;
 	rdfs:domain cdmc-cv:BusinessProcess ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/ControlledVocabularies> ;
 	rdfs:range cdmc-cv:DataElementConcept ;
+	<http://www.w3.org/2004/02/skos/core#definition> "identifies a Data Element Concept that is the input or output of a Business Process" ;
 	.
 
 cdmc-core:DataSet
