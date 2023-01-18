@@ -1,4 +1,5 @@
 # imports: https://spec.edmcouncil.org/cdmc/ontology/Core
+# imports: https://spec.edmcouncil.org/cdmc/ontology/Lineage
 
 @prefix cdmc-core: <https://spec.edmcouncil.org/cdmc/ontology/Core/> .
 @prefix cdmc-cost: <https://spec.edmcouncil.org/cdmc/ontology/Cost/> .
@@ -14,7 +15,10 @@
 	dct:abstract "This ontology defines notions for determining costs of various cloud data management functions. " ;
 	dct:license "https://opensource.org/licenses/MIT"^^xsd:AnyURI ;
 	sm:copyright "Copyright (c) 2022 EDM Council, Inc." ;
-	owl:imports <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
+	owl:imports
+		<https://spec.edmcouncil.org/cdmc/ontology/Core> ,
+		<https://spec.edmcouncil.org/cdmc/ontology/Lineage>
+		;
 	owl:versionInfo "Created with TopBraid Composer" ;
 	.
 
@@ -69,9 +73,30 @@ cdmc-cost:StorageCost
 cdmc-cost:incurs
 	a owl:ObjectProperty ;
 	rdfs:label "incurs" ;
-	rdfs:domain [] ;
+	rdfs:comment "The acquisition of a liability" ;
+	rdfs:domain _:blank4 ;
 	rdfs:isDefinedBy <https://spec.edmcouncil.org/cdmc/ontology/Core> ;
 	rdfs:range cdmc-cost:Cost ;
 	<http://www.w3.org/2004/02/skos/core#definition> "specifies the Cost that is incurred by something" ;
+	.
+
+_:blank1
+	rdf:first cdmc-core:DataService ;
+	rdf:rest rdf:nil ;
+	.
+
+_:blank2
+	rdf:first cdmc-core:DatabaseStorage ;
+	rdf:rest _:blank1 ;
+	.
+
+_:blank3
+	rdf:first <https://spec.edmcouncil.org/cdmc/ontology/Lineage/Activity> ;
+	rdf:rest _:blank2 ;
+	.
+
+_:blank4
+	a owl:Class ;
+	owl:unionOf _:blank3 ;
 	.
 
